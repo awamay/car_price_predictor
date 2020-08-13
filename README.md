@@ -1,17 +1,13 @@
 # UsedCarPricePrediction
+The data was taken from kaggle.
+Various data cleaning and preprocessing steps were performed and visualizations were made. Further, the prediction models used were XGBoost, Random Forest, Decision Tree and Lasso Regression. Finally, the most suitable model with least found mean absolute erro was selected the model was deployed using Django with a minimally aesthetic user interface made using HTML, CSS and bootstrap.
 
-Using Dataset from kaggle I created different models XGBoost, Random Forest, Decision Tree and Lasso Regression and took the most suitable model and deployed it using Django and made its user interface minimally aesthetic using bootstrap4 in django.
+Random Forest performed better than the others. The model was stored in a pickl file and used in Django API.
 
-Random Forest worked well enough among others. I pickled it and used in my Django API.
+In DjangoAPI project model was created with respect to the required fields in the dataset.
 
-In my DjangoAPI project I created models with respect to the required fields in the dataset.
+Serializers were used to make data interpretable to the machine by converting complex data such as querysets and model instances into native Python data types.
 
-I used serializers to make my data interpretable to the machine by converting complex data such as querysets and model instances to be converted into native Python data types.
+To accept details of car from user forms were created.
 
-To accept details of car from user I created forms in Django.
-
-Now I edited my views to create functions that will work in the backdround to fetch the posted details and perform preprocessing on it and use my ML model to predict and display answers.
-
-I created forms using 'crispy' and used Bootstrap 4 to organize the page.
-
-If there are any suggestions as to what more can be done to improve model's efficiency or Django code or the user interface. Do let me know.
+Now, views were created with functions that would work in the background to fetch the posted details, preprocess it and use the ML model to predict and display the prices.
